@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Static - Used to load the Favicon -->
+{% load static %}
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>
+    Template - {% block title %} Open-Source Admin Panel {% endblock %}
+  </title>
+  <link href="/static/backend/css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon" type="image/x-icon" href="/static/backend/img/favicon.png" />
+  <script data-search-pseudo-elements defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js"
+    crossorigin="anonymous"></script>
+
+  <!-- Specific CSS goes HERE -->
+  {% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+
+<body class="bg-primary">
+  <div id="layoutAuthentication">
+    <div id="layoutAuthentication_content">
+      <main>
+
+      {% block content %}{% endblock content %}
+    </main>
+    </div>
+    {% include "includes/backend/footer-fullscreen.html" %}
+
+  </div>
+    {% include "includes/backend/scripts-fullscreen.html" %}
+</body>
+
+</html>

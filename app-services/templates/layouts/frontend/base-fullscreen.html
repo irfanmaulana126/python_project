@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Static - Used to load the Favicon -->
+{% load static %}
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>
+    Template - {% block title %} Open-Source Admin Panel {% endblock %}
+  </title>
+  <link href="/static/frontend/css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon" type="image/x-icon" href="/static/frontend/img/favicon.png" />
+  <script data-search-pseudo-elements defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js"
+    crossorigin="anonymous"></script>
+
+  <!-- Specific CSS goes HERE -->
+  {% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+
+<body>
+  <div id="layoutDefault">
+    <div id="layoutDefault_content">
+      <main>
+      {% include "includes/frontend/navigation-fullscreen.html" %}
+
+      <!-- Page Header-->
+      <header class="page-header page-header-light bg-white">
+        <div class="page-header-content pt-5">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6" data-aos="fade-up">
+                <h1 class="page-header-title">Website dan undangan digital</h1>
+                <p class="page-header-text mb-5">Solusi atas segala undangan pernikan, ulang tahun, party dan lain sebagainya, yang kamu butuhkan untuk mengajak teman, kerabat atau keluarga</p>
+                <a
+                  class="btn btn-lg btn-primary-soft text-primary font-weight-500"
+                  href="https://docs.startbootstrap.com/sb-ui-kit-pro/quickstart">Buat Sekarang</a>
+                  <a class="btn btn-lg btn-primary font-weight-500 mr-3" href="landing-multipurpose.html">View Demo<i
+                    class="ml-2" data-feather="arrow-right"></i></a>
+              </div>
+              <div class="col-lg-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="100"><img class="img-fluid"
+                  src="/static/frontend/img/illustrations/programming.svg" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="svg-border-rounded text-light">
+          <!-- Rounded SVG Border--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34"
+            preserveAspectRatio="none" fill="currentColor">
+            <path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
+          </svg>
+        </div>
+      </header>
+
+      {% block content %}{% endblock content %}
+    </main>
+    </div>
+    {% include "includes/frontend/footer-fullscreen.html" %}
+
+  </div>
+    {% include "includes/frontend/scripts-fullscreen.html" %}
+</body>
+
+</html>
