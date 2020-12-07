@@ -127,3 +127,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+SESION_COOKIE_AGE = 5 * 60
+
+SESION_EXPIRE_AT_BROWSER_CLOSE = True
